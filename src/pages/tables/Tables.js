@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import MUIDataTable from "mui-datatables";
@@ -10,6 +10,7 @@ import Table from "../dashboard/components/Table/Table";
 
 // data
 import mock from "../dashboard/mock";
+
 
 const datatableData = [
   ["Joe James", "Example Inc.", "Yonkers", "NY"],
@@ -38,6 +39,22 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Tables() {
+  const [users, setUsers] = useState([])
+  const [user, setUser] = useState({
+    email: '',
+    name : '',
+    error: '',
+  });
+useEffect (() => {
+fetch('http://localhost:8055/items/reactdemo')
+.then(data => {
+return data.json();
+})
+.then(users => {
+console.log('users', users)
+setUsers(users.data)
+});
+  }, [])
   const classes = useStyles();
   return (
     <>
@@ -46,7 +63,7 @@ export default function Tables() {
         <Grid item xs={12}>
           <MUIDataTable
             title="Employee List"
-            data={datatableData}
+            data={users}
             columns={["Name", "Company", "City", "State"]}
             options={{
               filterType: "checkbox",
