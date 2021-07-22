@@ -80,7 +80,7 @@ export default function Tables() {
       array[1] = user.company
       array[2] = user.city 
       array[3] = user.state
-      newUser.push(array)
+      newUser.unshift(array)
       setUsers(newUser)
     }
   }
