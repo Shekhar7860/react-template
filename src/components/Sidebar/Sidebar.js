@@ -10,6 +10,8 @@ import {
   LibraryBooks as LibraryIcon,
   HelpOutline as FAQIcon,
   ArrowBack as ArrowBackIcon,
+  People as PeopleIcon, 
+  PersonAdd as addIcon,
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
 import { withRouter } from "react-router-dom";
@@ -33,11 +35,19 @@ const structure = [
   { id: 0, label: "Dashboard", link: "/app/dashboard", icon: <HomeIcon /> },
   {
     id: 1,
-    label: "Typography",
+    label: "User Management",
     link: "/app/typography",
-    icon: <TypographyIcon />,
+    icon: <PeopleIcon/>,
+     children: [
+      { label: "add", link: "/app/add", icon : <PeopleIcon/> },
+      { label: "edit", link: "/app/ui/charts" },
+      { label: "view", link: "/app/view" },
+    ],
   },
-  { id: 2, label: "Tables", link: "/app/tables", icon: <TableIcon /> },
+  { id: 2, label: "Inventory Management", link: "/app/tables", icon: <TableIcon />, children: [
+      { label: "products", link: "/app/ui/icons" },
+      { label: "categories", link: "/app/ui/charts" },
+    ], },
   {
     id: 3,
     label: "Notifications",

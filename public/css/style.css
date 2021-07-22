@@ -1,0 +1,22 @@
+
+
+
+.MuiListItemIcon-root {
+	min-width: 30px !important;
+}
+.inputRoot{
+     display: flex !important;
+    maxWidth: 100vw;
+    overflowX: hidden;
+    color: inherit;
+    margin-left : 30px;
+  }
+  .row-data{
+  	display: flex;
+  }
+  .margin-down{
+  	margin-bottom : 10px
+  }
+  .emptyWidth{
+  	width : 30px
+  }

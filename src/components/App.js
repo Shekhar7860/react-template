@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 // components
 import Layout from "./Layout";
-
+import User from './user'
 // pages
 import Error from "../pages/error";
 import Login from "../pages/login";
@@ -18,6 +18,7 @@ export default function App() {
   return (
     <HashRouter>
       <Switch>
+        <Route path="/app/add" component={User}/>
         <Route exact path="/" render={() => <Redirect to="/app/dashboard" />} />
         <Route
           exact

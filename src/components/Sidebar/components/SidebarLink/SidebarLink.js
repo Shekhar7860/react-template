@@ -67,7 +67,7 @@ export default function SidebarLink({
             [classes.linkIconActive]: isLinkActive,
           })}
         >
-          {nested ? <Dot color={isLinkActive && "primary"} /> : icon}
+         {nested ? <Dot color={isLinkActive && "primary"} /> : icon}
         </ListItemIcon>
         <ListItemText
           classes={{
@@ -115,7 +115,7 @@ export default function SidebarLink({
         />
       </ListItem>
     );
-
+  
   return (
     <>
       <ListItem

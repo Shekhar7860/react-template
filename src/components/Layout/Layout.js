@@ -44,7 +44,7 @@ function Layout(props) {
   return (
     <div className={classes.root}>
         <>
-          <Header history={props.history} />
+          <Header history={props.history} title={'Signity Solutions'}/>
           <Sidebar />
           <div
             className={classnames(classes.content, {
