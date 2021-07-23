@@ -8,7 +8,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import PageTitle from "../../components/PageTitle";
 import Widget from "../../components/Widget";
 import Table from "../dashboard/components/Table/Table";
-import CustomToolbar from "./CustomToolbar";
+
 // data
 import mock from "../dashboard/mock";
 import { TextField, Button } from "@material-ui/core";
